@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gran Concierto</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <style>
+    body {
+      background-color: lightgray;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .contenedor {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .caja-azul {
+      width: 100%;
+      height: 100%;
+      color: blue;
+      text-align: center;
+    }
+
+    table {
+      margin: 50px auto;
+    }
+
+    .caja-titulo {
+      color: black;
+      padding: 1%;
+      text-align: center;
+    }
+
+    .foto-diome {
+      padding: 1%;
+      text-align: center;
+    }
+
+    .social-red {
+      text-align: center;
+      padding: 1%;
+    }
+
+    .bibliografia {
+      text-align: center;
+      padding: 0 5%;
+    }
+
+    /* Carrusel */
+    .carrusel {
+      position: relative;
+      width: 80%;
+      margin: 38px auto;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .carrusel-imagenes {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carrusel-imagenes img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .boton {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 24px;
+      z-index: 1;
+    }
+
+    .boton.izquierda {
+      left: 10px;
+    }
+
+    .boton.derecha {
+      right: 10px;
+    }
+    .video{
+      text-align: center;
+    }
+    .nombre{
+      text-align: center;
+    }
+    .maps{
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="caja-titulo">
+    <h1>Diomedes Díaz</h1>
+  </div>
+
+  <div class="carrusel">
+    <div class="carrusel-imagenes" id="carruselImagenes">
+      <img src="4.imagenes/img/diomedes1.jpeg" alt="Imagen 1">
+      <img src="4.imagenes/img/diomedes2,jpng.avif" alt="Imagen 2">
+      <img src="4.imagenes/img/Diomedes.jpeg" alt="Imagen 3">
+    </div>
+    <button class="boton izquierda" onclick="moverCarrusel(-1)">&#10094;</button>
+    <button class="boton derecha" onclick="moverCarrusel(1)">&#10095;</button>
+  </div>
+
+  <div class="foto-diome">
+    <img src="4.imagenes/img/foto.jpg" alt="" width="60%">
+  </div>
+
+  <div class="caja-azul">
+    <table border="5">
+      <tr>
+        <th>Lugar:</th>
+        <th>Fecha:</th>
+        <th>Hora:</th>
+        <th>Apertura:</th>
+        <th>Edad Mínima:</th>
+      </tr>
+      <tr>
+        <td>Estadio Atanasio Girardot</td>
+        <td>05/AGOSTO</td>
+        <td>8:00 PM</td>
+        <td>7:30 PM</td>
+        <td>18 Años</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="contenedor">
+    <h2>DÍA 5 DE AGOSTO</h2>
+    <h2>ENTRADA A 2 BARRA</h2>
+  </div>
+
+  <div class="bibliografia">
+    <h2>Bibliografía.</h2>
+    <p>
+      Un muchacho llamado Diomedes (luego ampliado como El silencio del coloso), escrito por Luis Joaquín Mendoza Sierra, relata su vida desde joven hasta su consolidación como artista.
+      Las últimas horas de Diomedes Díaz de José Zequeda Mestre, detalla los momentos finales de su vida.
+      La eterna parranda de Alberto Salcedo Ramos, ofrece una visión cultural y humana del artista y del vallenato.
+      El cacique y la reina de Gustavo Bolívar, investiga el caso de Doris Adriana Niño y su relación con Diomedes.
+      Diomedes Díaz Maestre, el inmortal de Víctor Sánchez Rincones, es una biografía novelada basada en sus últimos años.
+      Los saludos de Diomedes de Saúl Aguilar, recopila y analiza sus saludos en canciones, una de sus marcas personales.
+      Las vainas de Diomedes de Jorge Mantilla Rojas, retrata su vida a través de décimas poéticas.
+    </p>
+  </div>
+
+  <div class="social-red">
+    <h2>Redes Sociales.</h2>
+    <table>
+      <tr>
+        <th><a href="https://www.facebook.com">Facebook</a></th>
+        <th><a href="https://www.tiktok.com">Tiktok</a></th>
+        <th><a href="https://www.instagram.com">Instagram</a></th>
+      </tr>
+      <tr>
+        <td><img src="4.imagenes/img/fb.png" alt="" width="50%"></td>
+        <td><img src="4.imagenes/img/tiktok.png" alt="" width="53%"></td>
+        <td><img src="4.imagenes/img/icons8-instagram-128.png" alt="" width="70%"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CCy61qn0Um8?si=MZLK-6GoiaB8OPK9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <div class="maps">
+    <h2>Maps</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0528614813256!2d-75.59274782581775!3d6.256766993731771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44290e4f870f69%3A0xf57f97b59ef52c39!2sEstadio%20de%20F%C3%BAtbol%20Atanasio%20Girardot!5e0!3m2!1ses!2sco!4v1754311874453!5m2!1ses!2sco" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!4v1754311936510!6m8!1m7!1sXOLa_j9TFgaYfFsTmpXT_A!2m2!1d6.256909349944275!2d-75.59189805834707!3f134.99443!4f0!5f0.7820865974627469" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  
+
+  <script>
+    const carrusel = document.getElementById('carruselImagenes');
+    let index = 0;
+
+    function moverCarrusel(direccion) {
+      const total = carrusel.children.length;
+      index = (index + direccion + total) % total;
+      carrusel.style.transform = `translateX(-${index * 100}%)`;
+    }
+  </script>
+  <hr>
+  <div class="nombre">
+    <h2>Santiago Moreno y Emmanuel Cardozo - 3223877</h2>
+  </div>
+  
+
+</body>
+</html>
